@@ -1,5 +1,5 @@
 // 核心变量
-const backendUrl = 'http://localhost:3000'; // 后端地址，部署后要改
+const backendUrl = 'https://circle-click-game-api.onrender.com';
 let score = 0;
 let timer = 42;
 let gameInterval;
