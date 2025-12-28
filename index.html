@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆圈点击挑战 | 42秒极限</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 游戏开始界面 -->
+        <div class="start-screen" id="startScreen">
+            <h1>🔴 圆圈点击挑战</h1>
+            <p>42秒内点击随机出现的圆圈，每点一个得1分！</p>
+            <button id="startBtn">开始游戏</button>
+            <button id="rankBtn">查看排行榜</button>
+        </div>
+
+        <!-- 游戏主界面 -->
+        <div class="game-screen" id="gameScreen" style="display: none;">
+            <div class="stats">
+                <span>分数: <span id="score">0</span></span>
+                <span>倒计时: <span id="timer">42</span>秒</span>
+            </div>
+            <div class="circle-area" id="circleArea">
+                <!-- 圆圈会动态生成在这里 -->
+            </div>
+        </div>
+
+        <!-- 游戏结束界面 -->
+        <div class="end-screen" id="endScreen" style="display: none;">
+            <h2>游戏结束！</h2>
+            <p>你的最终分数: <span id="finalScore">0</span></p>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="输入你的昵称（2-6个字）">
+                <button id="uploadBtn">上传成绩</button>
+            </div>
+            <button id="restartBtn">再来一局</button>
+            <button id="backRankBtn">查看排行榜</button>
+        </div>
+
+        <!-- 排行榜界面 -->
+        <div class="rank-screen" id="rankScreen" style="display: none;">
+            <h2>🏆 排行榜</h2>
+            <div class="rank-list" id="rankList">
+                <!-- 排行榜数据会动态加载 -->
+            </div>
+            <button id="backBtn">返回首页</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
